@@ -14,11 +14,11 @@ import java.io.Serializable;
 public class ImagenFondo implements Serializable
 {
     private File rutaImagen;
-    private Float poacidad;
+    private Float opacidad;
 
-    public ImagenFondo(File rutaImagen, Float poacidad) {
+    public ImagenFondo(File rutaImagen, Float opacidad) {
         this.rutaImagen = rutaImagen;
-        this.poacidad = poacidad;
+        this.opacidad = opacidad;
     }
 
     public File getRutaImagen() {
@@ -29,12 +29,12 @@ public class ImagenFondo implements Serializable
         this.rutaImagen = rutaImagen;
     }
 
-    public Float getPoacidad() {
-        return poacidad;
+    public Float getOpacidad() {
+        return opacidad;
     }
 
-    public void setPoacidad(Float poacidad) {
-        this.poacidad = poacidad;
+    public void setOpacidad(Float opacidad) {
+        this.opacidad = opacidad;
     }
     
     
