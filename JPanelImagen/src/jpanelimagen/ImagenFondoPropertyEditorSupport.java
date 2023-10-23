@@ -13,7 +13,7 @@ import java.beans.PropertyEditorSupport;
  */
 public class ImagenFondoPropertyEditorSupport extends PropertyEditorSupport
 {
-    private ImagenFondoPanel imagenfondoPanel = new ImagenFondoPanel();
+    private ImagenFondoPanel imagenFondoPanel = new ImagenFondoPanel();
     @Override
     public boolean supportsCustomEditor() {
         return true; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
@@ -21,17 +21,18 @@ public class ImagenFondoPropertyEditorSupport extends PropertyEditorSupport
 
     @Override
     public Component getCustomEditor() {
-        return imagenfondoPanel; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return imagenFondoPanel; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
 
     @Override
     public String getJavaInitializationString() {
-        return super.getJavaInitializationString(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        ImagenFondo imagenFondo = imagenFondoPanel.getSelectedValue();
+        return "new jpanelimagen.ImagenFondo("+"new java.io.File(\""+imagenFondo.getRutaImagen().getAbsolutePath()+"\"),"+imagenFondo.getOpacidad()+"f)"; 
     }
 
     @Override
     public Object getValue() {
-        return imagenfondoPanel.getSelectedValue(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return imagenFondoPanel.getSelectedValue(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
     
 }
